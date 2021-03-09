@@ -79,15 +79,13 @@ public class StarGen {
 	 */
 	public static String genCharString(int numToPrint,int spacesBefore,int spacesAfter, char symb) {
 		String result = "";
-		
-		for(int i = 0; i < spacesBefore; i++) {
-			result += " ";
-		}
-		for(int i = 0; i < numToPrint; i++) {
-			result += symb;
-		}
-		for(int i = 0; i < spacesAfter; i++) {
-			result += " ";
+		int len = numToPrint + spacesBefore + spacesAfter;
+		for(int i = 0; i < len; i++) {
+			if(i >= spacesBefore && i < len - spacesAfter) {
+				result += symb;
+			}else {
+				result += " ";
+			}
 		}
 		return result;
 	}
