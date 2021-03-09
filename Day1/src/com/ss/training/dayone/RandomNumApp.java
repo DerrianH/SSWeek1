@@ -7,12 +7,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
+ * Number Guessing game
  * @author derrianharris
  *
  */
 public class RandomNumApp {
 
 	/**
+	 * Ask the user to guess a number.
 	 * @param args
 	 */
 	public static void main(String[] args) {
