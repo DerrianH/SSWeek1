@@ -37,7 +37,7 @@ public class StarGen {
 		
 		
 		/*
-		 *  Print out the out example on page 19 of the Day One powerpoint
+		 *  Prints out the out example on page 19 of the Day One powerpoint
 		 *
 		System.out.println("\n1) ");
 		for(int i = 1; i <= 4; i++) {
