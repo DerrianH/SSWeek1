@@ -14,69 +14,80 @@ public class StarGen {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		for(int i = 0; i <= 4; i++) {
-			System.out.println(genCharString(i,'*'));
+		System.out.println("\n1) ");
+		for(int i = 1; i <= 4; i++) {
+			System.out.println(genCharString(i,0,0,'*'));
 		}
-		System.out.println(genCharString(9,'-'));
+		System.out.println(genCharString(6,0,0,'.'));
+		
+		System.out.println("\n2) ");
+		int length = 4;
+		for(int i = 1; i <= 4; i++) {
+			int spacesBefore = length - i;
+			System.out.println(genCharString(i,spacesBefore,0,'*'));
+		}
+		System.out.println(genCharString(6,0,0,'.'));
+		
+		System.out.println("\n3) ");
+		for(int i = 4; i > 0; i--) {
+			System.out.println(genCharString(i,0,0,'*'));
+		}
+		System.out.println(genCharString(6,0,0,'.'));
 		
 		
-		System.out.println(genCharString(10,'-'));
+		
+		/*
+		 *  Print out the out example on page 19 of the Day One powerpoint
+		 *
+		System.out.println("\n1) ");
+		for(int i = 1; i <= 4; i++) {
+			System.out.println(genCharString(i,0,0,'*'));
+		}
+		System.out.println(genCharString(9,0,0,'.'));
+		
+		System.out.println("\n2) ");
+		System.out.println(genCharString(10,0,0,'.'));
 		for(int i = 4; i >= 0; i--) {
-			System.out.println(genCharString(i,'*'));
+			System.out.println(genCharString(i,0,0,'*'));
 		}
 		
-		
+		System.out.println("\n3) ");
+		int lineLength = 11;
 		for(int i = 0; i < 4; i++) {
 			int j = i * 2 + 1;
-			System.out.println(genCharStringCentered(11,j,'*'));
+			int numSpaces = (int) Math.ceil((lineLength - j) * 0.5);
+			System.out.println(genCharString(j,numSpaces,numSpaces,'*'));
 		}
-		System.out.println(genCharString(11,'-'));
+		System.out.println(genCharString(lineLength,0,0,'.'));
 		
+		System.out.println("\n4) ");
 		for(int i = 3; i >= 0; i--) {
 			int j = i * 2 + 1;
-			System.out.println(genCharStringCentered(11,j,'*'));
+			int numSpaces = (int) Math.ceil((lineLength - j) * 0.5);
+			System.out.println(genCharString(j,numSpaces,numSpaces,'*'));
 		}
-		System.out.println(genCharString(12,'-'));
-		
-
+		System.out.println(genCharString(12,0,0,'.'));
+		*/
 	}
 	
 	
 	/**
-	 * Generates a number of chars in a string
+	 * Generates a number of chars in a string with a certain number of spaces before and after the symbols.
 	 * @param num
 	 * @param symb
 	 * @return
 	 */
-	public static String genCharString(int num, char symb) {
+	public static String genCharString(int numToPrint,int spacesBefore,int spacesAfter, char symb) {
 		String result = "";
 		
-		for(int i = 0; i < num; i++) {
+		for(int i = 0; i < spacesBefore; i++) {
+			result += " ";
+		}
+		for(int i = 0; i < numToPrint; i++) {
 			result += symb;
 		}
-		return result;
-	}
-
-
-	/**
-	 * Generates a number of chars in a string centered around a middle point
-	 * @param lineLength
-	 * @param num
-	 * @param symb
-	 * @return
-	 */
-	public static String genCharStringCentered(int lineLength,int num, char symb) {
-		String result = "";
-		int halfNum = (int) Math.ceil((lineLength - num) * 0.5);
-		for(int i = 0; i < lineLength; i++) {
-			
-			if(i >= halfNum && i < lineLength - halfNum ) {
-				result += symb;
-				continue;
-			}
+		for(int i = 0; i < spacesAfter; i++) {
 			result += " ";
-			
 		}
 		return result;
 	}
