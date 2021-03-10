@@ -1,9 +1,6 @@
 /**
- * 
- */
-/**
  * @author derrianharris
  *
  */
-module Day1 {
+module Week1 {
 }
