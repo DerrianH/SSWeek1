@@ -6,6 +6,7 @@ package com.ss.training.dayfive;
 import java.util.Arrays;
 
 /**
+ * Class to Integer array into csv
  * @author derrianharris
  *
  */
@@ -24,7 +25,18 @@ public class CommaSeperatedString {
 
 	}
 
+	/**
+	 * Return given array in csv format with 'e' or 'o' appended 
+	 * to the beginning of each number depending on if it is even or odd
+	 * @param arr
+	 * @return
+	 */
 	public String evenOrOdd(Integer[] arr) {
+		if(arr == null) {
+			return "";
+		}
+		
+		
 		return String.join(",", Arrays.stream(arr).map(i -> {
 			if (i % 2 == 0) {
 				return "e" + i;

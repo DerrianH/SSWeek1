@@ -16,6 +16,7 @@ import com.ss.training.weekone.RecursionTest;
  */
 
 /**
+ * Test Suite Class for Week1 project
  * @author derrianharris
  *
  */

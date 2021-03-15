@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
- * Junit Test Class for Line class
+ * JUnit Test Class for Line class
  * 
  * @author derrianharris
  *

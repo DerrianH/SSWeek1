@@ -10,6 +10,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
+ * Class to parse a file and run its functions
  * @author derrianharris
  *
  */
@@ -46,10 +47,18 @@ public class Lambdas {
 		}
 	}
 
+	/**
+	 * Returns true if the given number is odd
+	 * @return
+	 */
 	public PerformOperation isOdd() {
 		return n -> n % 2 != 0;
 	}
 
+	/**
+	 * Returns true if the given number is prime
+	 * @return
+	 */
 	public PerformOperation isPrime() {
 		return n -> {
 
@@ -65,10 +74,18 @@ public class Lambdas {
 		};
 	}
 
+	/**
+	 * Returns true if the given number is a palindrome
+	 * @return
+	 */
 	public PerformOperation isPalindrome() {
 		return n -> n.toString().equals(new StringBuilder(n.toString()).reverse().toString());
 	}
 
+	/**
+	 * Returns Array of Arrays of parsed file
+	 * @return
+	 */
 	public Integer[][] parseInputFile(String filePath) {
 		File file = new File(filePath);
 		try (Scanner txtScanner = new Scanner(file);) {

@@ -16,6 +16,7 @@ import java.util.List;
 import org.junit.Test;
 
 /**
+ * JUnit Test class for DateAndTime class
  * @author derrianharris
  *
  */

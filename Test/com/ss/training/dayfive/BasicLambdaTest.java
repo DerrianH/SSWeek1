@@ -10,6 +10,7 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
+ * JUnit Test class for BasicLambda class
  * @author derrianharris
  *
  */
@@ -22,9 +23,10 @@ public class BasicLambdaTest {
 		String[] stringArrTwo = { "a","is","This", "array","string"};
 		String[] stringArrThree = { "This", "is", "a", "string", "array"};
 		bl.sortByLengthAsc(stringArrOne);
-		
+		bl.sortByLengthAsc(null);
 		assertEquals(Arrays.asList(stringArrTwo),Arrays.asList(stringArrOne));
 		assertNotEquals(Arrays.asList(stringArrThree),Arrays.asList(stringArrOne));
+		assertEquals(Arrays.asList(stringArrTwo),Arrays.asList(stringArrOne));
 	}
 	
 	@Test

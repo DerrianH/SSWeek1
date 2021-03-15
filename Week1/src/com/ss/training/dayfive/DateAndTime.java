@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
+ * Class that extends elements of LocalDate
  * @author derrianharris
  *
  */
@@ -36,8 +37,6 @@ public class DateAndTime {
 		 */
 		LocalDateTime birthday = LocalDateTime.of(1997,Month.FEBRUARY, 1, 23, 27, 0, 0);
 		System.out.println("Birthday: " + birthday.format(DateTimeFormatter.ISO_DATE_TIME));
-		
-		Random rand = new Random();
 		
 		/*
 		 * 2. Given a random date, how would you find the date of the previous Thursday?
@@ -84,6 +83,11 @@ public class DateAndTime {
 	}
 	
 	
+	/**
+	 * Returns the previous Thursday to a given date
+	 * @param date
+	 * @return
+	 */
 	public LocalDate getNearestThursday(LocalDate date) {
 		while(date.getDayOfWeek() != DayOfWeek.THURSDAY) {
 			date = date.minusDays(1);
@@ -93,16 +97,31 @@ public class DateAndTime {
 	
 	
 	
+	/**
+	 * Returns the Length of every month in a given year.
+	 * @param year
+	 * @return
+	 */
 	public Integer[] getLengthOfMonthGivenYear(Year year) {
 		Integer[] monthsLength = new Integer[12];
 		Arrays.stream(Month.values()).forEach(i->monthsLength[i.getValue()-1] = year.atMonth(i).lengthOfMonth());;
 		return monthsLength;
 	}
 	
+	/**
+	 * Returns the Length of every month in a given year.
+	 * @param year
+	 * @return
+	 */
 	public Integer[] getLengthOfMonthGivenYear(int year) {
 		return getLengthOfMonthGivenYear(Year.of(year));
 	}
 	
+	/**
+	 * Returns every Monday this year in a given month.
+	 * @param month
+	 * @return
+	 */
 	public List<Integer> getMondayDays(Month month) {
 		List<Integer> mondays = new ArrayList<Integer>();
 		LocalDate date = Year.now().atMonth(month).atDay(1);
@@ -117,10 +136,20 @@ public class DateAndTime {
 		return mondays;
 	}
 	
+	/**
+	 * Returns every Monday this year in a given month.
+	 * @param month
+	 * @return
+	 */
 	public List<Integer> getMondayDays(int month) {
 		return getMondayDays(Month.of(month));
 	}
 	
+	/**
+	 * Returns true the date is Friday the 13th.
+	 * @param date
+	 * @return
+	 */
 	public boolean isFridayTheThirteenth(LocalDate date) {
 		return date.getDayOfWeek() == DayOfWeek.FRIDAY && date.getDayOfMonth() == 13;
 	}

@@ -4,6 +4,7 @@
 package com.ss.training.weekone;
 
 /**
+ * Interface for performing Lambda operation
  * @author derrianharris
  *
  */

@@ -10,6 +10,7 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
+ * JUnit Test Class for StringList class
  * @author derrianharris
  *
  */

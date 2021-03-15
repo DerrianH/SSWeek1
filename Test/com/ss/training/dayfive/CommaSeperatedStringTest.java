@@ -10,6 +10,7 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
+ * JUnit Test class for CommaSeperatedString class
  * @author derrianharris
  *
  */
@@ -22,5 +23,7 @@ public class CommaSeperatedStringTest {
 
 		assertEquals("o1,e2,o3", csv.evenOrOdd(arr1));
 		assertNotEquals("o1,o222,o3", csv.evenOrOdd(arr2));
+		assertEquals("", csv.evenOrOdd(new Integer[] {}));
+		assertEquals("", csv.evenOrOdd(null));
 	}
 }

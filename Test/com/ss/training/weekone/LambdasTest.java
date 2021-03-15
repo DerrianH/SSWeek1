@@ -10,6 +10,7 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
+ * Test Class for Lambdas class
  * @author derrianharris
  *
  */
