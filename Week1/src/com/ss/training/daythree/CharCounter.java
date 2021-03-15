@@ -20,7 +20,7 @@ public class CharCounter {
 	public static void main(String[] args) {
 
 		// String txtPath = "Script.txt";
-		String txtPath = "ScriptSmall.txt";
+		String txtPath = "resources/ScriptSmall.txt";
 
 		CharCounter cc = new CharCounter();
 		Scanner sc = new Scanner(System.in);

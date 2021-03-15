@@ -29,7 +29,7 @@ public class AppendText {
 		text.append(sc.nextLine());
 
 		// String text = "Text to append.";
-		Path p = Paths.get("AppendText.txt");
+		Path p = Paths.get("resources/AppendText.txt");
 		at.appendText(p, text.toString());
 		System.out.println("Done!");
 		sc.close();
